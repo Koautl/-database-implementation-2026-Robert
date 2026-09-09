@@ -1,6 +1,6 @@
 # Database Implementation – My Learning Expectations
 ## About Me
-‑ Name: Robert Martinez-Olivera
+- Name: Robert Martinez-Olivera
 ‑ Major/Program: B.S in Computer Science
 ‑ Experience with coding: I started coding in high school and started working with MySQL in freshman year. Maybe 5 years total of personal coding experience.
 ## What I Expect to Learn
