@@ -20,6 +20,6 @@
 - Make sure to get all my project and HW deliverables in early so I can ask questions on them if I am confused or unsure.
   
 ## Questions I Have Right Now
-‑ Would you ever have a 2 databases with the same info but in different languages? 
+- Would you ever have a 2 databases with the same info but in different languages? 
 - Since memory is generally getting cheaper for the amount that we have access to, will practices in query search optimizations move from memory focused to cache focused?
 - What are the biggest or most crucial factors one should consider when designing a database?
