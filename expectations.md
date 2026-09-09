@@ -12,13 +12,13 @@
 - How to create and design more realistic schemas and have a better understanding of ERR diagrams
 - How to connect tools, applications, and use other coding languages on databases
 - Best practices in database management and implementation.
-- 
+
 ## My Personal Goals
 - I would like to create a project that I can showcase on my GitHub.
 - I would like to implement what I have learned on the database at the place I work. (They just use an excel spreadsheet)
 - The ability to understand queries and improve them for performance.
 - I would also like to have a great experience working with someone on the term long project.
-- 
+
 ## How I Plan to Stay On Track
 - I will do my best to attend every lecture and recitation
 - I will reach out the Professor, TA, and classmates for help on concepts I do not fully grasp yet.
