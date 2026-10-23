@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff Portal | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="dashboard-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a><div class="button-row"><span class="meta">Staff demo</span><a class="button secondary small" href="login.html">Sign out</a></div></div></header>
+  <div class="dashboard-shell">
+    <aside class="sidebar"><nav aria-label="Staff portal"><a class="active" href="staff-dashboard.html">Today's schedule</a><a href="#week">Week view</a><a href="#availability">Availability</a><a href="#payments">Record payment</a></nav></aside>
+    <main class="dashboard-main" id="main">
+      <div class="dashboard-title"><div><p class="eyebrow">Staff portal</p><h1>Thursday, October 22.</h1><p class="muted">Maya Brooks · 4 appointments today</p></div><button class="button secondary" type="button">Block time</button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="meta">Appointments</span><p class="stat-value">4</p></article>
+        <article class="stat-card"><span class="meta">Completed</span><p class="stat-value">1</p></article>
+        <article class="stat-card"><span class="meta">Remaining</span><p class="stat-value">3</p></article>
+        <article class="stat-card"><span class="meta">Booked hours</span><p class="stat-value">3.5</p></article>
+      </div>
+      <section class="panel"><div class="panel-head"><div><p class="eyebrow">Today</p><h2 style="font-size:1.8rem">Assigned appointments</h2></div><span class="meta">Demo actions update this screen only</span></div>
+        <div class="appointment-list">
+          <article class="appointment-row" data-appointment data-appointment-id="1047"><div class="date-tile"><strong>9:00</strong><span class="meta">AM</span></div><div class="appointment-info"><strong>Jordan Miles · Signature Cut</strong><p>45 minutes · (555) 012-7731</p></div><span class="status completed" data-status>Completed</span></article>
+          <article class="appointment-row" data-appointment data-appointment-id="1048"><div class="date-tile"><strong>11:00</strong><span class="meta">AM</span></div><div class="appointment-info"><strong>Sam Reed · Clipper Cut</strong><p>35 minutes · First visit</p></div><span class="status" data-status>Scheduled</span><div class="appointment-actions button-row"><button class="button small" type="button" data-status-action="Completed">Complete</button><button class="button secondary small" type="button" data-status-action="No Show">No-show</button></div></article>
+          <article class="appointment-row" data-appointment data-appointment-id="1049"><div class="date-tile"><strong>2:15</strong><span class="meta">PM</span></div><div class="appointment-info"><strong>Taylor Morgan · Signature Cut</strong><p>45 minutes · Returning customer</p></div><span class="status" data-status>Scheduled</span><div class="appointment-actions button-row"><button class="button small" type="button" data-status-action="Completed">Complete</button><button class="button secondary small" type="button" data-status-action="No Show">No-show</button></div></article>
+          <article class="appointment-row" data-appointment data-appointment-id="1050"><div class="date-tile"><strong>4:30</strong><span class="meta">PM</span></div><div class="appointment-info"><strong>Casey Green · Beard Detail</strong><p>30 minutes · Notes available</p></div><span class="status" data-status>Scheduled</span><div class="appointment-actions button-row"><button class="button small" type="button" data-status-action="Completed">Complete</button><button class="button secondary small" type="button" data-status-action="No Show">No-show</button></div></article>
+        </div>
+      </section>
+      <div class="dashboard-grid" style="margin-top:1.25rem">
+        <section class="panel" id="availability"><p class="eyebrow">Availability</p><h2 style="font-size:1.7rem">This week's hours</h2><div class="data-table-wrap"><table class="data-table"><tbody><tr><td>Tuesday</td><td>9:00 AM–5:00 PM</td></tr><tr><td>Wednesday</td><td>11:00 AM–7:00 PM</td></tr><tr><td>Thursday</td><td>9:00 AM–5:00 PM</td></tr><tr><td>Friday</td><td>11:00 AM–7:00 PM</td></tr><tr><td>Saturday</td><td>9:00 AM–4:00 PM</td></tr></tbody></table></div></section>
+        <aside class="panel" id="payments"><p class="eyebrow">Payment history</p><h2 style="font-size:1.7rem">Record a transaction</h2><p class="muted">Payment fields are present for layout only. No card or bank information should be entered.</p><button class="button" type="button">Open demo form</button></aside>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

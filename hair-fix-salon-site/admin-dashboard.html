@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrator Portal | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="dashboard-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a><div class="button-row"><span class="meta">Administrator demo</span><a class="button secondary small" href="login.html">Sign out</a></div></div></header>
+  <div class="dashboard-shell">
+    <aside class="sidebar"><nav aria-label="Administrator portal"><a class="active" href="admin-dashboard.html">Overview</a><a href="#appointments">Appointments</a><a href="#staff">Staff</a><a href="#services">Services</a><a href="reports.html">Reports</a></nav></aside>
+    <main class="dashboard-main" id="main">
+      <div class="dashboard-title"><div><p class="eyebrow">Administrator portal</p><h1>Salon overview.</h1><p class="muted">Thursday, October 22, 2026</p></div><a class="button" href="reports.html">View reports</a></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="meta">Today's appointments</span><p class="stat-value">12</p><span class="meta">9 scheduled · 3 completed</span></article>
+        <article class="stat-card"><span class="meta">Today's revenue</span><p class="stat-value">$420</p><span class="meta">Succeeded charges minus refunds</span></article>
+        <article class="stat-card"><span class="meta">Active staff</span><p class="stat-value">5</p><span class="meta">3 working today</span></article>
+        <article class="stat-card"><span class="meta">No-show rate</span><p class="stat-value">4.2%</p><span class="meta">Last 30 days</span></article>
+      </div>
+      <div class="dashboard-grid">
+        <section class="panel" id="appointments"><div class="panel-head"><div><p class="eyebrow">Operations</p><h2 style="font-size:1.8rem">Today's schedule</h2></div><button class="button secondary small" type="button">Add appointment</button></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Time</th><th>Customer</th><th>Service</th><th>Staff</th><th>Status</th></tr></thead><tbody><tr><td>9:00 AM</td><td>Jordan Miles</td><td>Signature Cut</td><td>Maya Brooks</td><td><span class="status completed">Completed</span></td></tr><tr><td>10:15 AM</td><td>Riley Chen</td><td>Color Refresh</td><td>Alex Rivera</td><td><span class="status">In progress</span></td></tr><tr><td>11:00 AM</td><td>Sam Reed</td><td>Clipper Cut</td><td>Maya Brooks</td><td><span class="status">Scheduled</span></td></tr><tr><td>11:30 AM</td><td>Jamie Cole</td><td>Silk Press</td><td>Jordan Lee</td><td><span class="status">Scheduled</span></td></tr></tbody></table></div></section>
+        <aside class="panel"><p class="eyebrow">Management</p><h2 style="font-size:1.7rem">Quick actions</h2><div class="quick-list"><a href="#staff"><span>Manage staff</span><span>→</span></a><a href="#services"><span>Manage services</span><span>→</span></a><a href="reports.html"><span>Open reports</span><span>→</span></a><a href="reports.html#audit"><span>Review audit history</span><span>→</span></a></div></aside>
+      </div>
+      <div class="dashboard-grid" style="margin-top:1.25rem">
+        <section class="panel" id="staff"><div class="panel-head"><div><p class="eyebrow">Team</p><h2 style="font-size:1.8rem">Staff members</h2></div><button class="button secondary small" type="button">Add staff</button></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Name</th><th>Specialty</th><th>Today</th><th>Status</th></tr></thead><tbody><tr><td>Maya Brooks</td><td>Cuts and grooming</td><td>4 appointments</td><td>Active</td></tr><tr><td>Jordan Lee</td><td>Styling</td><td>5 appointments</td><td>Active</td></tr><tr><td>Alex Rivera</td><td>Color</td><td>3 appointments</td><td>Active</td></tr></tbody></table></div></section>
+        <section class="panel" id="services"><div class="panel-head"><div><p class="eyebrow">Catalog</p><h2 style="font-size:1.8rem">Active services</h2></div><button class="button secondary small" type="button">Add service</button></div><div class="data-table-wrap"><table class="data-table"><tbody><tr><td>Signature Cut</td><td>$45</td><td>45 min</td></tr><tr><td>Silk Press</td><td>$80</td><td>90 min</td></tr><tr><td>Color Refresh</td><td>$95</td><td>120 min</td></tr><tr><td>Protective Style</td><td>$120</td><td>180 min</td></tr></tbody></table></div></section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

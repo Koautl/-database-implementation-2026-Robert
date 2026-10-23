@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Portal | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="dashboard-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a><div class="button-row"><span class="meta">Customer demo</span><a class="button secondary small" href="login.html">Sign out</a></div></div></header>
+  <div class="dashboard-shell">
+    <aside class="sidebar"><nav aria-label="Customer portal"><a class="active" href="customer-dashboard.html">Overview</a><a href="book.html">Book appointment</a><a href="#appointments">Appointments</a><a href="#history">History</a><a href="#profile">Profile</a></nav></aside>
+    <main class="dashboard-main" id="main">
+      <div class="dashboard-title"><div><p class="eyebrow">Customer portal</p><h1>Good afternoon, Taylor.</h1></div><a class="button" href="book.html">Book appointment</a></div>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="meta">Upcoming</span><p class="stat-value">1</p></article>
+        <article class="stat-card"><span class="meta">Completed visits</span><p class="stat-value">6</p></article>
+        <article class="stat-card"><span class="meta">Favorite service</span><p class="stat-value" style="font-size:1.25rem">Signature Cut</p></article>
+        <article class="stat-card"><span class="meta">Member since</span><p class="stat-value" style="font-size:1.25rem">2025</p></article>
+      </div>
+      <div class="dashboard-grid">
+        <section class="panel" id="appointments"><div class="panel-head"><div><p class="eyebrow">Next visit</p><h2 style="font-size:1.8rem">Upcoming appointment</h2></div><span class="status">Scheduled</span></div>
+          <div class="appointment-row"><div class="date-tile"><span class="meta">OCT</span><strong>24</strong></div><div class="appointment-info"><strong>Signature Cut</strong><p>2:15 PM–3:00 PM · Maya Brooks</p><p>Hair Fix Salon · 123 Main Street</p></div></div>
+          <div class="button-row" style="margin-top:1rem"><button class="button small" type="button">Reschedule</button><button class="button secondary small" type="button">Cancel appointment</button></div>
+          <p class="meta" style="margin-top:1rem">Prototype only: actions are not saved.</p>
+        </section>
+        <aside class="panel"><p class="eyebrow">Quick actions</p><h2 style="font-size:1.6rem">Manage your visit</h2><div class="quick-list"><a href="book.html"><span>Book another service</span><span>→</span></a><a href="#history"><span>View appointment history</span><span>→</span></a><a href="#profile"><span>Update contact details</span><span>→</span></a></div></aside>
+      </div>
+      <section class="panel" id="history" style="margin-top:1.25rem"><div class="panel-head"><div><p class="eyebrow">Past visits</p><h2 style="font-size:1.8rem">Appointment history</h2></div></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Date</th><th>Service</th><th>Stylist</th><th>Status</th><th>Amount</th></tr></thead><tbody><tr><td>Sep 12, 2026</td><td>Silk Press</td><td>Jordan Lee</td><td><span class="status completed">Completed</span></td><td>$80</td></tr><tr><td>Jul 28, 2026</td><td>Signature Cut</td><td>Maya Brooks</td><td><span class="status completed">Completed</span></td><td>$45</td></tr><tr><td>Jun 03, 2026</td><td>Color Refresh</td><td>Alex Rivera</td><td><span class="status">Cancelled</span></td><td>—</td></tr></tbody></table></div></section>
+      <section class="panel" id="profile" style="margin-top:1.25rem"><p class="eyebrow">Profile</p><h2 style="font-size:1.8rem">Contact preferences</h2><div class="form-grid"><div class="field"><label for="profile-email">Email</label><input id="profile-email" type="email" value="taylor@example.com"></div><div class="field"><label for="profile-phone">Phone</label><input id="profile-phone" type="tel" value="(555) 012-4410"></div><div class="field"><label for="preference">Appointment notifications</label><select id="preference"><option>Text message</option><option>Email</option><option>Both</option></select></div></div><button class="button small" type="button" style="margin-top:1rem">Save demo changes</button></section>
+    </main>
+  </div>
+</body>
+</html>

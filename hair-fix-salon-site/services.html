@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" data-menu><a href="index.html">Home</a><a href="services.html" aria-current="page">Services</a><a href="book.html">Book</a><a class="nav-cta" href="login.html">Sign in</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Service menu</p><h1>Find your fit.</h1><p class="lede">Browse sample services for the front-end prototype. Final pricing can be updated by an administrator after database implementation.</p></div></section>
+    <section class="section"><div class="container">
+      <div class="filter-row" aria-label="Filter services">
+        <button class="filter-button active" type="button" data-service-filter="all">All</button>
+        <button class="filter-button" type="button" data-service-filter="cut">Cuts</button>
+        <button class="filter-button" type="button" data-service-filter="style">Styling</button>
+        <button class="filter-button" type="button" data-service-filter="color">Color</button>
+      </div>
+      <div class="service-list" data-service-list>
+        <article class="service-card" data-service-category="cut"><p class="eyebrow">Cut</p><h3>Signature Cut</h3><p class="muted">Consultation, shampoo, tailored cut, and finish.</p><div class="card-row"><span class="price">$45</span><span class="meta">45 min</span></div></article>
+        <article class="service-card" data-service-category="cut"><p class="eyebrow">Cut</p><h3>Clipper Cut</h3><p class="muted">Precision clipper work, shape-up, and styling.</p><div class="card-row"><span class="price">$35</span><span class="meta">35 min</span></div></article>
+        <article class="service-card" data-service-category="style"><p class="eyebrow">Style</p><h3>Silk Press</h3><p class="muted">Cleanse, conditioning treatment, press, and finish.</p><div class="card-row"><span class="price">$80</span><span class="meta">90 min</span></div></article>
+        <article class="service-card" data-service-category="style"><p class="eyebrow">Style</p><h3>Protective Style</h3><p class="muted">Consultation and protective styling customized to you.</p><div class="card-row"><span class="price">$120</span><span class="meta">180 min</span></div></article>
+        <article class="service-card" data-service-category="color"><p class="eyebrow">Color</p><h3>Color Refresh</h3><p class="muted">Tone and refresh existing color with a polished finish.</p><div class="card-row"><span class="price">$95</span><span class="meta">120 min</span></div></article>
+        <article class="service-card" data-service-category="style"><p class="eyebrow">Grooming</p><h3>Beard Detail</h3><p class="muted">Shape, line, and finish with hot towel treatment.</p><div class="card-row"><span class="price">$30</span><span class="meta">30 min</span></div></article>
+      </div>
+      <div class="notice" style="margin-top:2rem">Prices shown are starting prices for this prototype. A consultation may be required for final service pricing.</div>
+    </div></section>
+    <section class="section dark"><div class="narrow"><p class="eyebrow">Next step</p><h2>Choose a service and see sample openings.</h2><a class="button secondary" href="book.html">Book an appointment</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-bottom">© <span data-current-year></span> Hair Fix Salon. Student project prototype.</div></footer>
+</body>
+</html>

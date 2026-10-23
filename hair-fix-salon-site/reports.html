@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body class="dashboard-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="dashboard-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a><div class="button-row"><span class="meta">Administrator demo</span><a class="button secondary small" href="login.html">Sign out</a></div></div></header>
+  <div class="dashboard-shell">
+    <aside class="sidebar"><nav aria-label="Administrator portal"><a href="admin-dashboard.html">Overview</a><a href="admin-dashboard.html#appointments">Appointments</a><a href="admin-dashboard.html#staff">Staff</a><a href="admin-dashboard.html#services">Services</a><a class="active" href="reports.html">Reports</a></nav></aside>
+    <main class="dashboard-main" id="main">
+      <div class="dashboard-title"><div><p class="eyebrow">Administrator reports</p><h1>Performance at a glance.</h1><p class="muted">All figures are fictional front-end sample data.</p></div><button class="button secondary" type="button">Export preview</button></div>
+      <section class="panel" style="margin-bottom:1.25rem"><div class="form-grid"><div class="field"><label for="report-type">Report</label><select id="report-type"><option>Monthly revenue summary</option><option>Daily schedule</option><option>Service popularity</option><option>Staff workload</option><option>Cancellations and no-shows</option></select></div><div class="field"><label for="report-range">Date range</label><select id="report-range"><option>October 2026</option><option>Last 30 days</option><option>Quarter to date</option><option>Year to date</option></select></div></div></section>
+      <div class="stats-grid">
+        <article class="stat-card"><span class="meta">Net revenue</span><p class="stat-value">$8,460</p><span class="meta">+8.3% from September</span></article>
+        <article class="stat-card"><span class="meta">Completed visits</span><p class="stat-value">184</p><span class="meta">92% completion rate</span></article>
+        <article class="stat-card"><span class="meta">Average ticket</span><p class="stat-value">$62</p><span class="meta">Succeeded charges</span></article>
+        <article class="stat-card"><span class="meta">Cancellations</span><p class="stat-value">11</p><span class="meta">5.5% of appointments</span></article>
+      </div>
+      <div class="dashboard-grid">
+        <section class="panel"><div class="panel-head"><div><p class="eyebrow">Monthly revenue</p><h2 style="font-size:1.8rem">Six-month trend</h2></div><strong>$43,720 total</strong></div><div class="bar-chart" role="img" aria-label="Revenue bar chart from May through October"><div class="bar-group"><div class="bar" style="height:58%"></div><span class="bar-label">May</span></div><div class="bar-group"><div class="bar" style="height:66%"></div><span class="bar-label">Jun</span></div><div class="bar-group"><div class="bar" style="height:61%"></div><span class="bar-label">Jul</span></div><div class="bar-group"><div class="bar" style="height:76%"></div><span class="bar-label">Aug</span></div><div class="bar-group"><div class="bar" style="height:82%"></div><span class="bar-label">Sep</span></div><div class="bar-group"><div class="bar" style="height:91%"></div><span class="bar-label">Oct</span></div></div></section>
+        <aside class="panel"><p class="eyebrow">Most booked</p><h2 style="font-size:1.7rem">Service popularity</h2><div class="appointment-list"><div class="appointment-row"><div class="appointment-info"><strong>Signature Cut</strong><p>68 completed appointments</p></div><strong>37%</strong></div><div class="appointment-row"><div class="appointment-info"><strong>Silk Press</strong><p>43 completed appointments</p></div><strong>23%</strong></div><div class="appointment-row"><div class="appointment-info"><strong>Color Refresh</strong><p>31 completed appointments</p></div><strong>17%</strong></div><div class="appointment-row"><div class="appointment-info"><strong>Other services</strong><p>42 completed appointments</p></div><strong>23%</strong></div></div></aside>
+      </div>
+      <section class="panel" style="margin-top:1.25rem"><div class="panel-head"><div><p class="eyebrow">Staff workload</p><h2 style="font-size:1.8rem">October activity</h2></div></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Staff member</th><th>Completed</th><th>Booked hours</th><th>Revenue</th><th>No-shows</th></tr></thead><tbody><tr><td>Maya Brooks</td><td>71</td><td>58.5</td><td>$3,120</td><td>2</td></tr><tr><td>Jordan Lee</td><td>63</td><td>77.0</td><td>$2,840</td><td>1</td></tr><tr><td>Alex Rivera</td><td>50</td><td>81.5</td><td>$2,500</td><td>1</td></tr></tbody></table></div></section>
+      <section class="panel" id="audit" style="margin-top:1.25rem"><div class="panel-head"><div><p class="eyebrow">Appointment audit preview</p><h2 style="font-size:1.8rem">Recent changes</h2></div></div><div class="data-table-wrap"><table class="data-table"><thead><tr><th>Time</th><th>Appointment</th><th>Event</th><th>Changed by</th></tr></thead><tbody><tr><td>Oct 22 · 1:05 PM</td><td>#1048</td><td>Marked completed</td><td>Maya Brooks</td></tr><tr><td>Oct 22 · 10:42 AM</td><td>#1051</td><td>Rescheduled</td><td>Administrator</td></tr><tr><td>Oct 22 · 9:48 AM</td><td>#1049</td><td>Customer cancelled</td><td>Riley Chen</td></tr></tbody></table></div></section>
+    </main>
+  </div>
+</body>
+</html>

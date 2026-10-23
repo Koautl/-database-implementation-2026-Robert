@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | Hair Fix Salon</title>
+  <link rel="stylesheet" href="assets/styles.css"><script src="assets/config.js" defer></script><script src="assets/mock-data.js" defer></script><script src="assets/api-client.js" defer></script><script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">HF</span><span>Hair Fix Salon</span></a>
+    <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="site-nav" id="primary-nav" data-menu><a href="index.html">Home</a><a href="services.html">Services</a><a href="book.html" aria-current="page">Book</a><a class="nav-cta" href="login.html">Sign in</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="page-hero"><div class="container"><p class="eyebrow">Appointment request</p><h1>Pick your next visit.</h1><p class="lede">This prototype demonstrates the booking experience. It does not save or send appointment information.</p></div></section>
+    <section class="section"><div class="container booking-layout">
+      <form class="panel" data-booking-form>
+        <div class="form-section"><h2 style="font-size:1.6rem">1. Service and stylist</h2><div class="form-grid">
+          <div class="field"><label for="service">Service</label><select id="service" name="serviceId" data-service-select required><option value="">Select a service</option></select></div>
+          <div class="field"><label for="stylist">Stylist</label><select id="stylist" name="staffId" data-staff-select><option value="">No preference</option></select></div>
+        </div></div>
+        <div class="form-section"><h2 style="font-size:1.6rem">2. Date and time</h2><div class="field"><label for="date">Preferred date</label><input id="date" name="appointmentDate" type="date" required></div><p class="meta" style="margin-top:1rem">Available times</p><div class="slot-grid" data-availability-list><span class="muted">Select a service and date to see openings.</span></div><input id="selected-time" name="startTime" type="hidden"></div>
+        <div class="form-section"><h2 style="font-size:1.6rem">3. Contact details</h2><div class="form-grid">
+          <div class="field"><label for="first-name">First name</label><input id="first-name" name="firstName" autocomplete="given-name" required></div>
+          <div class="field"><label for="last-name">Last name</label><input id="last-name" name="lastName" autocomplete="family-name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="notes">Notes (optional)</label><textarea id="notes" name="notes" placeholder="Tell your stylist anything helpful for the appointment."></textarea></div>
+        </div></div>
+        <button class="button" type="submit">Review prototype request</button>
+        <div class="form-message" data-booking-message tabindex="-1" role="status"></div>
+      </form>
+      <aside class="panel summary-panel"><p class="eyebrow">Appointment summary</p><h2 style="font-size:1.8rem">Your selection</h2><div class="summary-list"><div><span>Service</span><strong data-summary-service>Not selected</strong></div><div><span>Stylist</span><strong data-summary-stylist>No preference</strong></div><div><span>Date</span><strong data-summary-date>Not selected</strong></div><div><span>Time</span><strong data-summary-time>Not selected</strong></div><div><span>Starting price</span><strong data-summary-price>--</strong></div></div><div class="notice">Demo only. No appointment is created and no personal information is stored.</div></aside>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-bottom">© <span data-current-year></span> Hair Fix Salon. Student project prototype.</div></footer>
+</body>
+</html>
