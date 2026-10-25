@@ -1,4 +1,3 @@
-HAIR FIX SALON - RECOMMENDED UPLOAD SET
 
 Required project deliverables named by the professor:
 1. Hair_Fix_Salon_FRD_Revised.pdf
