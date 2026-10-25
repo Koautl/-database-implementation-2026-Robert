@@ -1,5 +1,4 @@
 USE hair_fix_salon;
-USE hair_fix_salon;
  
 -- UserAccount - TDD Sec. 7 pp.5-6; FR-01
 ALTER TABLE UserAccount
