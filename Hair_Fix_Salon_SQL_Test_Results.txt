@@ -1,0 +1,79 @@
+Hair Fix Salon SQL Test Results
+Execution date: 2026-10-25
+Execution environment: MariaDB 12.3.3 local isolated server
+Target documented by project: MySQL 8.x
+
+Compatibility note:
+The supplied tables.sql uses MySQL 8 collation utf8mb4_0900_ai_ci. For this
+local MariaDB compatibility run only, that collation was substituted at run
+time with utf8mb4_unicode_ci. The original file was not changed. The team
+should repeat the build in MySQL 8 before final submission.
+
+Build verification
+------------------
+Base tables created: 14
+Views created: 7
+Named performance indexes created: 8
+CHECK constraints present: 16
+Foreign keys present: 22
+Primary keys present: 14
+UNIQUE constraints present: 8
+Stored procedures present: 0
+Triggers present: 0
+
+Executed acceptance tests
+-------------------------
+TC-01  PASS  Duplicate account email was rejected.
+TC-03  FAIL  A partially overlapping appointment was accepted by direct INSERT.
+TC-07  PASS  Appointment price and duration snapshots remained 50.00 and 60.
+TC-08  FAIL  An ordinary UPDATE of AppointmentHistory was accepted.
+TC-14  PASS  Net revenue was 80.00: succeeded charge 100.00 minus refund 20.00.
+TC-15  FAIL  A booking for an inactive service was accepted by direct INSERT.
+TC-16  PASS  The daily schedule returned appointments 1 and 2 in time order.
+TC-17  PASS  A schedule with EndTime before StartTime was rejected.
+TC-18  PASS  Blank phone and unsupported contact preference were rejected.
+TC-20  PASS  Payments saved for Cancelled and No-Show appointments without
+             changing their statuses.
+
+Summary: 10 executed, 7 passed, 3 failed.
+
+Supporting query results
+------------------------
+Monthly revenue view:
+ReportMonth  NetRevenue  SucceededCharges  SucceededRefunds  AverageCharge  AllRows
+2026-10     80.00       1                 1                 100.00         4
+
+Daily schedule view:
+AppointmentID  StartDateTime         Customer      Service   Staff       Status
+1              2026-10-27 09:00:00   Taylor Reed   Haircut   Jordan Lee  Scheduled
+2              2026-10-27 11:00:00   Taylor Reed   Haircut   Jordan Lee  Completed
+
+EXPLAIN evidence:
+The staff/date appointment query selected idx_Appointment_StaffStartStatus
+with access type range and estimated two rows.
+
+Not executed from the 20-case TDD test plan
+-------------------------------------------
+TC-02  No controlled booking procedure or booking-history trigger was supplied.
+TC-04  No status-change authorization procedure or database role grants were supplied.
+TC-05  No controlled status-transition procedure was supplied.
+TC-06  No booking transaction procedure or forced-failure hook was supplied.
+TC-09  No controlled rescheduling procedure was supplied.
+TC-10  No controlled rescheduling procedure with the 24-hour rule was supplied.
+TC-11  No availability procedure/view that subtracts blocked time was supplied.
+TC-12  No controlled payment-recording procedure was supplied.
+TC-13  No payment authorization procedure or database role grants were supplied.
+TC-19  No controlled rescheduling procedure was supplied.
+
+Important structural findings
+-----------------------------
+1. PaymentTransaction has only its primary key. The supplied keys.sql does not
+   add its foreign keys, and checks.sql does not add amount/type/status checks
+   or a unique external-reference constraint.
+2. No procedures or triggers are present, so overlap prevention, role-based
+   workflow enforcement, transaction rollback behavior, immutable history,
+   and inactive-service booking prevention are not yet implemented.
+3. No standalone initial-data script was supplied. The acceptance-test script
+   contains a small repeatable test seed, but the group still needs to decide
+   whether that seed is appropriate as the project's official initial data.
+
