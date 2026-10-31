@@ -37,7 +37,7 @@ No. This is a significant blind spot in the current database implementation.
 
 **Answer:**
 
-[Answer / Additional Feedback to Be Added]
+The controlled procedures use transactions, row locks, and rollback handlers. Booking and rescheduling lock relevant rows before checking availability and overlap. Database roles also limit normal users to the controlled procedures instead of direct appointment changes. Additional concurrent-user testing is still needed.
 
 ### Question 5: Do You Have a Way to Deal With Overlap in Your Procedures?
 
