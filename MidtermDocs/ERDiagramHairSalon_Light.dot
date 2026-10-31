@@ -1,0 +1,86 @@
+digraph HairFixSalon {
+  graph [
+    rankdir=TB,
+    bgcolor="white",
+    pad="0.28",
+    nodesep="0.25",
+    ranksep="0.52",
+    splines=polyline,
+    outputorder=edgesfirst,
+    labelloc="t",
+    label="Hair Fix Salon - Entity-Relationship Diagram\n",
+    fontname="Helvetica-Bold",
+    fontsize=18
+  ];
+
+  node [
+    shape=record,
+    fontname="Helvetica",
+    fontsize=8.5,
+    color="#222222",
+    penwidth=1.0,
+    style="filled",
+    fillcolor="#F7F7F7",
+    margin="0.08,0.05"
+  ];
+
+  edge [
+    fontname="Helvetica",
+    fontsize=7.2,
+    color="#4A4A4A",
+    fontcolor="#202020",
+    arrowsize=0.65,
+    dir=both,
+    arrowtail=tee,
+    arrowhead=crowodot
+  ];
+
+  Role [label="{Role|PK RoleID|RoleName UQ|Description}"];
+  UserAccount [label="{UserAccount|PK UserID|FK RoleID|Email UQ|PasswordHash|FirstName|LastName|AccountStatus|CreatedAt|LastUpdatedAt}"];
+  Customer [label="{Customer|PK CustomerID|FK UserID UQ|Phone|ContactPreference|ProfileStatus}"];
+  Staff [label="{Staff|PK StaffID|FK UserID UQ|FK LocationID|Phone|Specialty|ActiveFlag|HireDate}"];
+  Location [label="{Location|PK LocationID|SalonName|Address|City / State / PostalCode|Phone|TimeZone|ActiveFlag}"];
+  Service [label="{Service|PK ServiceID|ServiceName UQ|Description|CurrentPrice|DurationMinutes|ActiveFlag}"];
+  StaffService [label="{StaffService|PK FK StaffID|PK FK ServiceID|IsActive|AssignedAt}"];
+  StaffSchedule [label="{StaffSchedule|PK ScheduleID|FK StaffID|ScheduleType|DayOfWeek / ScheduleDate|StartTime / EndTime|Effective dates|Reason|CreatedAt}"];
+  AppointmentStatus [label="{AppointmentStatus|PK StatusID|StatusName UQ|IsFinal|SortOrder UQ}"];
+  StatusTransition [label="{AppointmentStatusTransition|PK FK FromStatusID|PK FK ToStatusID|CustomerAllowed|StaffAllowed|AdministratorAllowed|RequiresReason}"];
+  Appointment [label="{Appointment|PK AppointmentID|FK CustomerID|FK StaffID|FK ServiceID|FK LocationID|FK StatusID|StartDateTime / EndDateTime|BookedPrice|BookedDurationMinutes|CreatedAt / UpdatedAt|CancelledAt|Notes}"];
+  AppointmentHistory [label="{AppointmentHistory|PK HistoryID|FK AppointmentID|FK ChangedByUserID|Previous / New StatusID|Previous / New times|Previous / New StaffID|Previous / New ServiceID|EventType|ChangedAt|Reason|RequestID}"];
+  PaymentMethod [label="{PaymentMethod|PK PaymentMethodID|MethodName UQ|ActiveFlag}"];
+  PaymentTransaction [label="{PaymentTransaction|PK TransactionID|FK AppointmentID|FK PaymentMethodID|FK RecordedByUserID|Amount|TransactionType|PaymentStatus|TransactionDate|CreatedAt|ExternalReference}"];
+
+  Legend [shape=plain, label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD><B>Legend</B></TD></TR><TR><TD ALIGN="LEFT">PK = Primary key</TD></TR><TR><TD ALIGN="LEFT">FK = Foreign key</TD></TR><TR><TD ALIGN="LEFT">UQ = Unique</TD></TR><TR><TD ALIGN="LEFT">Bar at parent = exactly one</TD></TR><TR><TD ALIGN="LEFT">Circle + crow at child = zero or many</TD></TR><TR><TD ALIGN="LEFT">Circle + bar at child = zero or one</TD></TR></TABLE>>];
+
+  {rank=same; Role; Location; Service; AppointmentStatus; PaymentMethod;}
+  {rank=same; UserAccount; StaffService; StatusTransition;}
+  {rank=same; Customer; Staff;}
+  {rank=same; StaffSchedule; Appointment;}
+  {rank=same; AppointmentHistory; PaymentTransaction; Legend;}
+
+  Role -> UserAccount;
+  UserAccount -> Customer [arrowhead=teeodot];
+  UserAccount -> Staff [arrowhead=teeodot];
+  Location -> Staff;
+  Staff -> StaffSchedule;
+  Staff -> StaffService;
+  Service -> StaffService;
+
+  Customer -> Appointment;
+  Staff -> Appointment;
+  Service -> Appointment;
+  Location -> Appointment;
+  AppointmentStatus -> Appointment;
+  AppointmentStatus -> StatusTransition;
+  AppointmentStatus -> StatusTransition;
+
+  Appointment -> AppointmentHistory;
+  UserAccount -> AppointmentHistory;
+  AppointmentStatus -> AppointmentHistory;
+  Staff -> AppointmentHistory;
+  Service -> AppointmentHistory;
+
+  Appointment -> PaymentTransaction;
+  PaymentMethod -> PaymentTransaction;
+  UserAccount -> PaymentTransaction;
+}
